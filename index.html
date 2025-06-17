@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClimbZ - Consultoria Empresarial</title>
+  <meta name="description" content="Consultoria empresarial especializada em estruturação, acompanhamento, consultorias avulsas, produtos tech, gestão patrimonial e diagnóstico organizacional. Converse com nossa agente virtual Maria e leve sua empresa ao topo do sucesso." />
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-yrig6mQTF1fVYF2wXJ7m3r2X2kuE3K1UA+VZ+3dtY0l4Uut0c7fFpc8X+gVoTn1Z" crossorigin="anonymous">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Paleta de cores */
+    :root {
+      --primary-color: #122f4a;   /* azul primário ClimbZ */
+      --secondary-color: #f4f8fb; /* azul claro quase branco para fundos */
+      --accent-color: #ffffff;    /* cor de destaque (branco neste caso) */
+    }
+
+    /* Cabeçalho fixo */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .menu-icon {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Menu responsivo (hambúrguer) */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+      }
+      nav ul.open {
+        display: flex;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+      nav ul li a {
+        padding: 10px 0;
+      }
+    }
+
+    /* Hero Section (capa) */
+    .hero {
+      background: linear-gradient(135deg, #1c3d5a, #122f4a);
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px 100px; /* espaçamento topo para não ficar atrás do header fixo */
+    }
+    .hero h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .hero .cta-button {
+      display: inline-block;
+      background-color: #fff;
+      color: var(--primary-color);
+      padding: 15px 30px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+    .hero .cta-button i {
+      margin-left: 8px;
+    }
+    .hero .cta-button:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Seção de Destaques/Serviços */
+    #services {
+      background-color: var(--secondary-color);
+      padding: 60px 20px;
+    }
+    #services h2 {
+      text-align: center;
+      font-size: 1.8em;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .service-item i {
+      font-size: 2em;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .service-item h3 {
+      font-size: 1.1em;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .service-item p {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Seção de Depoimentos */
+    #testimonials {
+      padding: 60px 20px;
+    }
+    #testimonials h2 {
+      text-align: center;
+      font-size: 1.8em;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+    }
+    .testimonials-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      font-style: italic;
+    }
+    .testimonial::before {
+      content: "“";
+      font-family: serif;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 3em;
+      color: var(--primary-color);
+    }
+    .testimonial .quote {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    .testimonial .author, .highlight {
+      font-style: normal;
+      font-weight: bold;
+      color: #000;
+    }
+    .testimonial .author span {
+      font-weight: normal;
+      color: #555;
+    }
+
+    /* Rodapé */
+    footer {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-info p {
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
+    .footer-social a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.3em;
+    }
+    .footer-social a:hover {
+      color: #dde;
+    }
+    .footer-content .copy {
+      margin-top: 20px;
+      font-size: 0.8em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho Fixo -->
+  <header>
+    <div class="navbar">
+      <div class="logo">ClimbZ</div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Hero (Chamada principal) -->
+  <section class="hero">
+    <h1>Alcance o topo do sucesso com a ClimbZ</h1>
+    <p>Consultoria empresarial especializada para impulsionar o crescimento do seu negócio.</p>
+    <a href="#" class="cta-button">Converse conosco <i class="fas fa-comments"></i></a>
+  </section>
+
+  <!-- Seção de Destaques dos Serviços -->
+  <section id="services">
+    <h2>Nossos Serviços</h2>
+    <div class="services-grid">
+      <!-- Serviço 1 -->
+      <div class="service-item">
+        <i class="fas fa-handshake"></i>
+        <h3>Estruturação e Acompanhamento</h3>
+        <p>Diagnóstico 360° (finanças, vendas, processos, liderança) com plano de ação personalizado e consultoria contínua para resultados duradouros.</p>
+      </div>
+      <!-- Serviço 2 -->
+      <div class="service-item">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Consultoria Avulsa</h3>
+        <p>Consultoria sob demanda em vendas, finanças, processos, RH e planejamento de negócios – soluções rápidas para desafios específicos da sua empresa.</p>
+      </div>
+      <!-- Serviço 3 -->
+      <div class="service-item">
+        <i class="fas fa-robot"></i>
+        <h3>Produtos Tech</h3>
+        <p>Automatize processos e implemente dashboards personalizados (Power BI, Looker Studio, Metabase). Aproveite IA aplicada (ChatGPT) para ganhar eficiência e auditar sua stack tecnológica.</p>
+      </div>
+      <!-- Serviço 4 -->
+      <div class="service-item">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Gestão Patrimonial e Societária</h3>
+        <p>Planejamento sucessório e proteção patrimonial com apoio jurídico especializado, garantindo segurança e tranquilidade para sócios e familiares.</p>
+      </div>
+      <!-- Serviço 5 -->
+      <div class="service-item">
+        <i class="fas fa-clipboard-check"></i>
+        <h3>Diagnóstico Organizacional</h3>
+        <p>Avaliação completa de riscos psicossociais (COPSOQ, ISTAS21, NR-17) para melhorar o clima organizacional e o bem-estar da equipe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Depoimentos de Clientes -->
+  <section id="testimonials">
+    <h2>Depoimentos</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="quote">"Graças à ClimbZ, otimizamos nossos processos e <span class="highlight">nosso faturamento</span> em poucos meses. Recomendo a todos que buscam crescimento acelerado."</p>
+        <p class="author">João Silva <span>— CEO da Empresa X</span></p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"A consultoria da ClimbZ nos proporcionou uma visão estratégica que não tínhamos. Agora temos <span class="highlight">gestão financeira sólida</span> e uma equipe motivada."</p>
+        <p class="author">Maria Fernanda <span>— Diretora Financeira da Empresa Y</span></p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"Com as soluções tecnológicas da ClimbZ, <span class="highlight">automatizamos tarefas</span>  e ganhamos muita eficiência. A implementação foi rápida e superou nossas expectativas."</p>
+        <p class="author">Carlos Eduardo <span>— Gerente de Operações da Empresa Z</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé com Contato e Redes Sociais -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>ClimbZ Consultoria Empresarial - Sorocaba/SP, Brasil</p>
+        <p>Telefone: (15) 98765-4321 | E-mail: contato@climbz.com.br</p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p class="copy">© 2025 ClimbZ Consultoria. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script do menu móvel -->
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('open');
+    }
+  </script>
+
+  <!-- Widget de chat da agente virtual Maria -->
+  <script>
+    window.ZWidget = {
+      AgentURL: "https://platform.zaia.app/embed/chat/51574",
+    };
+  </script>
+  <script src="https://platform.zaia.app/script/widget-loader.js"></script>
+</body>
+</html>
