@@ -141,6 +141,42 @@
     .social-icons a:hover { color: #63DEF0; transform: scale(1.2); }
     .copyright { font-size: 0.8em; color: #ccc; margin-top: 20px; }
 
+    /* --- [NOVO CSS] ESTILOS PARA A SEÇÃO DA IA --- */
+    .ia-feature-bar {
+      background-color: var(--light-bg);
+      padding: 40px 20px;
+      border-bottom: 1px solid #e0e4e8;
+    }
+    .ia-feature-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .ia-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-basis: 300px; /* Garante que os itens tenham uma base de largura */
+    }
+    .ia-feature-item .icon {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    .ia-feature-item h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin: 0;
+    }
+    .ia-feature-item p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+
     /* Media queries para responsividade */
     @media (max-width: 992px) {
       .hero-banner { background-position: center center; }
@@ -180,11 +216,37 @@
     <div class="hero-banner">
       <div class="hero-content">
         <h1>Impulsione o crescimento da sua empresa com consultoria especializada</h1>
-        <p>Estratégias comprovadas em gestão e tecnologia para pequenas e médias empresas, com acompanhamento dedicado do início ao fim.</p>
+        <p>Converse com a <strong>Maria, nossa assistente de IA</strong>, e conheça nossas estratégias comprovadas em gestão e tecnologia para pequenas e médias empresas, com acompanhamento dedicado do início ao fim.</p>
         <!-- MUDANÇA: Adicionada a classe js-open-chat -->
         <a href="#" class="cta-button js-open-chat">Converse com a Maria</a>
       </div>
     </div>
+
+    <section class="ia-feature-bar">
+      <div class="ia-feature-container">
+        <div class="ia-feature-item">
+          <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="text">
+            <h3>Agende uma Reunião</h3>
+            <p>Converse com a Maria e encontre o melhor horário na nossa agenda.</p>
+          </div>
+        </div>
+        <div class="ia-feature-item">
+          <div class="icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="text">
+            <h3>Tire suas Dúvidas</h3>
+            <p>Pergunte sobre nossos serviços, métodos e casos de sucesso.</p>
+          </div>
+        </div>
+        <div class="ia-feature-item">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <div class="text">
+            <h3>Diagnóstico Rápido</h3>
+            <p>Receba uma análise inicial sobre os desafios da sua empresa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- O resto do seu conteúdo <main> continua aqui... -->
     <section class="social-proof" id="clientes">
@@ -291,3 +353,4 @@
 
 </body>
 </html>
+
