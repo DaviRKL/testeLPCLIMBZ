@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <!-- Todo o seu <head> permanece o mesmo -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClimbZ – Consultoria Empresarial</title>
-  <meta name="description" content="Consultoria empresarial especializada em estruturação, acompanhamento, consultorias avulsas, produtos tech, gestão patrimonial e diagnóstico organizacional. Converse com nossa agente virtual Maria e leve sua empresa ao topo do sucesso." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-yrig6mQTF1fVYF2wXJ7m3r2X2kuE3K1UA+VZ+3dtY0l4Uut0c7fFpc8X+gVoTn1Z" crossorigin="anonymous">
-  <link rel="icon" href="logofake.jpg">
+  <meta name="description"
+    content="Consultoria empresarial especializada em estruturação, acompanhamento, consultorias avulsas, produtos tech, gestão patrimonial e diagnóstico organizacional. Converse com nossa agente virtual Maria e leve sua empresa ao topo do sucesso." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-yrig6mQTF1fVYF2wXJ7m3r2X2kuE3K1UA+VZ+3dtY0l4Uut0c7fFpc8X+gVoTn1Z" crossorigin="anonymous">
+  <link rel="icon" href="Climbz Logo Symbol.png">
   <style>
     /* Todo o seu CSS permanece o mesmo */
     /* Reset e Variáveis Globais */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
-    ul { list-style: none; }
-    a { text-decoration: none; color: inherit; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     :root {
       --primary: #122f4a;
@@ -24,83 +47,195 @@
       --accent: #ffffff;
       --btn-gradient: linear-gradient(90deg, #63DEF0, #376BA1);
     }
-    
+
     /* Cabeçalho */
     header {
-      position: fixed; top: 0; width: 100%; background: var(--accent); box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000; transition: background-color 0.3s;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--accent);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: background-color 0.3s;
     }
+
     .header-inner {
-      max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
     }
-    .logo { font-size: 1.5em; font-weight: bold; color: var(--primary); }
-    nav ul { display: flex; gap: 25px; }
-    nav a { color: var(--primary); font-weight: 500; position: relative; padding-bottom: 5px; }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--primary);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
     nav a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--primary);
-        transition: width 0.3s ease-in-out;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease-in-out;
     }
-    nav a:hover::after { width: 100%; }
-    
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
     .btn-cta-header {
-      background: var(--btn-gradient); color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 0.9em;
+      background: var(--btn-gradient);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9em;
       transition: opacity 0.3s;
     }
-    .btn-cta-header:hover { opacity: 0.9; }
+
+    .btn-cta-header:hover {
+      opacity: 0.9;
+    }
 
     /* Menu Responsivo */
-    .menu-icon { display: none; font-size: 1.5em; cursor: pointer; color: var(--primary); }
-    @media (max-width: 768px) {
-      nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--accent); flex-direction: column; padding: 10px 20px; border-top: 1px solid #eee;}
-      nav ul.open { display: flex; }
-      nav li { margin: 10px 0; text-align: center;}
-      .menu-icon { display: block; }
+    .menu-icon {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: var(--primary);
     }
-    
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--accent);
+        flex-direction: column;
+        padding: 10px 20px;
+        border-top: 1px solid #eee;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      nav li {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
     /* Seção Hero Banner */
     .hero-banner {
       height: 550px;
-      padding-top: 70px; /* Altura do header */
+      padding-top: 70px;
+      /* Altura do header */
       position: relative;
       color: white;
       display: flex;
       align-items: center;
-      background-image: 
+      background-image:
         linear-gradient(to right, var(--primary) 35%, rgba(18, 47, 74, 0.85) 55%, rgba(18, 47, 74, 0) 75%),
         url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2832&auto=format&fit=crop');
       background-size: cover;
       background-position: center right;
     }
-    .hero-content { padding: 0 4rem; max-width: 50%; }
-    .hero-content h1 { font-size: 2.8rem; font-weight: bold; line-height: 1.2; }
-    .hero-content p { font-size: 1.1rem; margin-top: 1.5rem; max-width: 500px; color: #e0e0e0; }
+
+    .hero-content {
+      padding: 0 4rem;
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      max-width: 500px;
+      color: #e0e0e0;
+    }
+
     .hero-content .cta-button {
       display: inline-block;
-      background: var(--btn-gradient); color: #fff; padding: 15px 30px; text-decoration: none;
-      font-weight: bold; border-radius: 5px; margin-top: 2rem; transition: transform 0.3s, opacity 0.3s;
+      background: var(--btn-gradient);
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 2rem;
+      transition: transform 0.3s, opacity 0.3s;
     }
-    .hero-content .cta-button:hover { opacity: 0.9; transform: translateY(-3px); }
+
+    .hero-content .cta-button:hover {
+      opacity: 0.9;
+      transform: translateY(-3px);
+    }
 
     /* Prova Social */
-    .social-proof, #servicos, #depoimentos {
-        padding: 80px 20px;
+    .social-proof,
+    #servicos,
+    #depoimentos {
+      padding: 80px 20px;
     }
-    .section-title { text-align: center; color: var(--primary); font-size: 2.2em; margin-bottom: 15px; }
-    .section-subtitle { text-align: center; color: #555; margin-bottom: 50px; font-size: 1.1rem; }
 
-    .client-logos { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: center; }
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    .client-logos {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
     .client-logos img {
       max-width: 140px;
       filter: grayscale(100%);
       opacity: 0.6;
       transition: all 0.3s ease-in-out;
     }
+
     .client-logos img:hover {
       filter: grayscale(0%);
       opacity: 1;
@@ -108,39 +243,126 @@
     }
 
     /* Serviços */
-    .services-grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1200px; margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .service {
-      background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       border: 1px solid #eef;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .service:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    .service h3 { color: var(--primary); font-size: 1.3em; margin-bottom: 15px; font-weight: 600; }
-    .service p { color: #555; font-size: 0.95em; line-height: 1.5; }
+
+    .service h3 {
+      color: var(--primary);
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .service p {
+      color: #555;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
 
     /* Depoimentos */
-    #depoimentos { background: var(--light-bg); }
-    .testimonials-grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1200px; margin: 0 auto; }
+    #depoimentos {
+      background: var(--light-bg);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .testimonial {
-      background: #fff; padding: 30px; border-radius: 8px; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
+
     .testimonial::before {
-      content: "“"; position: absolute; top: 0px; left: 5px; font-size: 3em; color: #63DEF0; font-family: serif; opacity: 0.5;
+      content: "“";
+      position: absolute;
+      top: 0px;
+      left: 5px;
+      font-size: 3em;
+      color: #63DEF0;
+      font-family: serif;
+      opacity: 0.5;
     }
-    .testimonial p { margin-bottom: 15px; line-height: 1.5; position: relative; z-index: 1;}
-    .testimonial .author { font-style: italic; color: #555; text-align: right; }
-    .testimonial strong { font-weight: bold; color: var(--primary); }
+
+    .testimonial p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial .author {
+      font-style: italic;
+      color: #555;
+      text-align: right;
+    }
+
+    .testimonial strong {
+      font-weight: bold;
+      color: var(--primary);
+    }
 
     /* Rodapé */
-    footer { background: var(--primary); color: #fff; text-align: center; padding: 50px 20px; }
-    .footer-content p { margin: 8px 0; font-size: 0.9em; }
-    .social-icons { margin: 20px 0; }
-    .social-icons a { margin: 0 10px; color: #fff; font-size: 1.4em; transition: color 0.3s, transform 0.3s; display: inline-block; }
-    .social-icons a:hover { color: #63DEF0; transform: scale(1.2); }
-    .copyright { font-size: 0.8em; color: #ccc; margin-top: 20px; }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .footer-content p {
+      margin: 8px 0;
+      font-size: 0.9em;
+    }
+
+    .social-icons {
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.4em;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: #63DEF0;
+      transform: scale(1.2);
+    }
+
+    .copyright {
+      font-size: 0.8em;
+      color: #ccc;
+      margin-top: 20px;
+    }
 
     /* --- [NOVO CSS] ESTILOS PARA A SEÇÃO DA IA --- */
     .ia-feature-bar {
@@ -148,6 +370,7 @@
       padding: 40px 20px;
       border-bottom: 1px solid #e0e4e8;
     }
+
     .ia-feature-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -157,21 +380,26 @@
       flex-wrap: wrap;
       gap: 20px;
     }
+
     .ia-feature-item {
       display: flex;
       align-items: center;
       gap: 15px;
-      flex-basis: 300px; /* Garante que os itens tenham uma base de largura */
+      flex-basis: 300px;
+      /* Garante que os itens tenham uma base de largura */
     }
+
     .ia-feature-item .icon {
       font-size: 2rem;
       color: var(--primary);
     }
+
     .ia-feature-item h3 {
       font-size: 1.1rem;
       color: var(--primary);
       margin: 0;
     }
+
     .ia-feature-item p {
       font-size: 0.9rem;
       color: #555;
@@ -180,31 +408,126 @@
 
     /* Media queries para responsividade */
     @media (max-width: 992px) {
-      .hero-banner { background-position: center center; }
-      .hero-content { max-width: 65%; }
+      .hero-banner {
+        background-position: center center;
+      }
+
+      .hero-content {
+        max-width: 65%;
+      }
     }
+
     @media (max-width: 768px) {
       .hero-banner {
         text-align: center;
-        background-image: 
+        background-image:
           linear-gradient(to bottom, rgba(18, 47, 74, 0.95), rgba(18, 47, 74, 0.8)),
           url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop');
       }
-      .hero-content { max-width: 100%; padding: 2rem; }
-      .hero-content h1 { font-size: 2.2rem; }
+
+      .hero-content {
+        max-width: 100%;
+        padding: 2rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
     }
+
+    /* --- [NOVO CSS] ESTILOS PARA A SEÇÃO DE DIAGNÓSTICO --- */
+    #diagnostico {
+      background: var(--light-bg);
+      padding: 80px 20px;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      background: var(--btn-gradient);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-3px);
+    }
+
+    .submit-btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+
+    #form-status {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+   
+.logo img {
+  height: 40px; /* Ajuste este valor conforme necessário */
+  width: auto; /* Mantém a proporção da imagem */
+  vertical-align: middle; /* Garante alinhamento vertical perfeito */
+}
   </style>
 </head>
+
 <body>
 
   <header>
     <div class="header-inner">
-      <div class="logo">ClimbZ</div>
+      <div class="logo">
+        <a href="#"><img src="Climbz Main Logo.png" alt="Logo da ClimbZ"></a>
+      </div>
       <nav>
         <ul id="nav-links">
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#diagnostico">Receba um diagnóstico <strong>gratuito</strong></a></li>
         </ul>
       </nav>
       <!-- MUDANÇA: Adicionada a classe js-open-chat -->
@@ -217,14 +540,20 @@
     <div class="hero-banner">
       <div class="hero-content">
         <h1>Impulsione o crescimento da sua empresa com consultoria especializada</h1>
-        <p>Converse com a <strong>Maria, nossa assistente de IA</strong>, e conheça nossas estratégias comprovadas em gestão e tecnologia para pequenas e médias empresas, com acompanhamento dedicado do início ao fim.</p>
-        <!-- MUDANÇA: Adicionada a classe js-open-chat -->
-        <a href="#" class="cta-button js-open-chat">Converse com a Maria</a>
+        <p>Receba um diagnóstico gratuito para sua empresa. Responda ao formulário abaixo e deixe que a <strong>Maria, nossa assistente de IA</strong>, analise seus desafios e aponte os primeiros passos.</p>
+        <a href="#diagnostico" class="cta-button">Receba um diagnóstico <strong>gratuito</strong></a>
       </div>
     </div>
 
     <section class="ia-feature-bar">
       <div class="ia-feature-container">
+        <div class="ia-feature-item">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <div class="text">
+            <h3>Diagnóstico Rápido</h3>
+            <p>Preencha o formulário e receba uma análise inicial sobre os desafios da sua empresa.</p>
+          </div>
+        </div>
         <div class="ia-feature-item">
           <div class="icon"><i class="fas fa-calendar-alt"></i></div>
           <div class="text">
@@ -239,13 +568,44 @@
             <p>Pergunte sobre nossos serviços, métodos e casos de sucesso.</p>
           </div>
         </div>
-        <div class="ia-feature-item">
-          <div class="icon"><i class="fas fa-chart-line"></i></div>
-          <div class="text">
-            <h3>Diagnóstico Rápido</h3>
-            <p>Receba uma análise inicial sobre os desafios da sua empresa.</p>
+      </div>
+    </section>
+
+    <section id="diagnostico">
+      <h2 class="section-title">Receba um Diagnóstico Gratuito</h2>
+      <p class="section-subtitle">Responda algumas perguntas e nossa IA analisará seus desafios, enviando um diagnóstico
+        com os primeiros passos para sua empresa.</p>
+
+      <div class="form-container">
+        <form id="diag-form">
+          <div class="form-group">
+            <label for="nome">Seu Nome</label>
+            <input type="text" id="nome" name="nome" required>
           </div>
-        </div>
+          <div class="form-group">
+            <label for="email">Seu Melhor E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="setor">Qual o setor da sua empresa?</label>
+            <select id="setor" name="setor" required>
+              <option value="">Selecione...</option>
+              <option value="Serviços">Serviços</option>
+              <option value="Comércio">Comércio</option>
+              <option value="Indústria">Indústria</option>
+              <option value="Tecnologia">Tecnologia</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="desafio">Qual o seu maior desafio ou objetivo atualmente?</label>
+            <textarea id="desafio" name="desafio"
+              placeholder="Ex: Aumentar as vendas, organizar o financeiro, automatizar processos repetitivos..."
+              required></textarea>
+          </div>
+          <button type="submit" id="submit-button" class="submit-btn">Gerar meu Diagnóstico Gratuito</button>
+          <div id="form-status"></div>
+        </form>
       </div>
     </section>
 
@@ -254,23 +614,28 @@
       <div class="services-grid">
         <div class="service">
           <h3>Estruturação e Acompanhamento</h3>
-          <p>Diagnóstico completo, plano de ação personalizado e consultoria contínua para <strong>resultados consistentes</strong>.</p>
+          <p>Diagnóstico completo, plano de ação personalizado e consultoria contínua para <strong>resultados
+              consistentes</strong>.</p>
         </div>
         <div class="service">
           <h3>Consultoria Avulsa</h3>
-          <p>Atuação pontual em vendas, finanças, processos, RH e plano de negócios – soluções rápidas e <strong>focadas nos seus desafios</strong>.</p>
+          <p>Atuação pontual em vendas, finanças, processos, RH e plano de negócios – soluções rápidas e <strong>focadas
+              nos seus desafios</strong>.</p>
         </div>
         <div class="service">
           <h3>Produtos Tech</h3>
-          <p>Automatizações, dashboards em Power BI/Looker, IA aplicada e auditoria de stack para <strong>eficiência operacional</strong>.</p>
+          <p>Automatizações, dashboards em Power BI/Looker, IA aplicada e auditoria de stack para <strong>eficiência
+              operacional</strong>.</p>
         </div>
         <div class="service">
           <h3>Gestão Patrimonial e Societária</h3>
-          <p>Planejamento sucessório e blindagem jurídica com apoio especializado, garantindo <strong>segurança patrimonial</strong>.</p>
+          <p>Planejamento sucessório e blindagem jurídica com apoio especializado, garantindo <strong>segurança
+              patrimonial</strong>.</p>
         </div>
         <div class="service">
           <h3>Diagnóstico Organizacional</h3>
-          <p>Avaliação de riscos psicossociais e plano de ação para promover o <strong>bem-estar e a saúde mental</strong>.</p>
+          <p>Avaliação de riscos psicossociais e plano de ação para promover o <strong>bem-estar e a saúde
+              mental</strong>.</p>
         </div>
       </div>
     </section>
@@ -278,15 +643,18 @@
       <h2 class="section-title">O que nossos clientes dizem</h2>
       <div class="testimonials-grid">
         <div class="testimonial">
-          <p>A ClimbZ nos ajudou a <strong>reduzir custos operacionais em 30%</strong> em apenas 6 meses, trazendo uma melhoria significativa na eficiência do nosso time.</p>
+          <p>A ClimbZ nos ajudou a <strong>reduzir custos operacionais em 30%</strong> em apenas 6 meses, trazendo uma
+            melhoria significativa na eficiência do nosso time.</p>
           <p class="author">João Silva – Diretor Financeiro</p>
         </div>
         <div class="testimonial">
-          <p>Graças à consultoria, nossa empresa <strong>aumentou o faturamento</strong> e otimizou processos, alcançando resultados excelentes em tempo recorde.</p>
+          <p>Graças à consultoria, nossa empresa <strong>aumentou o faturamento</strong> e otimizou processos,
+            alcançando resultados excelentes em tempo recorde.</p>
           <p class="author">Maria Oliveira – CEO</p>
         </div>
         <div class="testimonial">
-          <p>Com as soluções da ClimbZ, <strong>automatizamos tarefas</strong> e ganhamos muita eficiência. A implementação foi rápida e superou nossas expectativas.</p>
+          <p>Com as soluções da ClimbZ, <strong>automatizamos tarefas</strong> e ganhamos muita eficiência. A
+            implementação foi rápida e superou nossas expectativas.</p>
           <p class="author">Carlos Pereira – Gerente de Operações</p>
         </div>
       </div>
@@ -302,7 +670,7 @@
     </section>
   </main>
 
-  <footer id="contato">
+  <footer>
     <div class="footer-content">
       <p><strong>Fale conosco:</strong> (11) 98765-4321 | contato@climbz.com.br</p>
       <p><strong>Endereço:</strong> Rua Exemplo, 123 – Sorocaba/SP</p>
@@ -325,21 +693,21 @@
     window.ZWidget = { AgentURL: "https://platform.zaia.app/embed/chat/51574" };
   </script>
   <script src="https://platform.zaia.app/script/widget-loader.js" async></script>
-  
+
   <!-- MUDANÇA FINAL: Script simplificado que usa o ID 'chatbot-fab' -->
   <script>
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       // 1. Seleciona todos os seus botões personalizados
       const customChatButtons = document.querySelectorAll('.js-open-chat');
-      
+
       // 2. Adiciona o evento de clique a cada um deles
-      customChatButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
+      customChatButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
           event.preventDefault(); // Impede que o link navegue para '#'
-          
+
           // 3. Tenta encontrar a bolha do chat pelo ID que você forneceu
           const chatBubble = document.getElementById('chatbot-fab');
-          
+
           // 4. Se a bolha for encontrada, simula um clique nela
           if (chatBubble) {
             chatBubble.click();
@@ -350,7 +718,56 @@
       });
     });
   </script>
+    <script>
+      const form = document.getElementById('diag-form');
+      const statusDiv = document.getElementById('form-status');
+      const submitButton = document.getElementById('submit-button');
 
-</body>
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Mostra feedback visual para o usuário
+        submitButton.disabled = true;
+        submitButton.innerText = 'Analisando com IA...';
+        statusDiv.innerText = '';
+
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        // SUBSTITUA PELA URL DO SEU APLICATIVO WEB DO GOOGLE APPS SCRIPT
+        const aapsScriptUrl = 'https://script.google.com/macros/s/AKfycbwW-zJSJAbDOo6Ob0U_-5xjubWv6xJhuFSiocDNhdwxbP4vpajn4L-gqDzebhmeHCaTJg/execI';
+
+        fetch(aapsScriptUrl, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(response => response.json())
+          .then(result => {
+            if (result.success) {
+              statusDiv.innerText = 'Diagnóstico enviado! Por favor, verifique seu e-mail.';
+              statusDiv.style.color = 'green';
+              form.reset();
+            } else {
+              throw new Error(result.error || 'Ocorreu um erro.');
+            }
+          })
+          .catch(error => {
+            statusDiv.innerText = 'Erro ao enviar. Tente novamente mais tarde.';
+            statusDiv.style.color = 'red';
+            console.error('Error:', error);
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.innerText = 'Gerar meu Diagnóstico Gratuito';
+          });
+      });
+    </script>
+  </body>
+
 </html>
-
