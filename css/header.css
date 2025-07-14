@@ -1,0 +1,68 @@
+/* css/header.css */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--accent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+
+
+.logo img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--primary);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.btn-cta-header {
+  background: var(--btn-gradient);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: opacity 0.3s;
+}
+
+.btn-cta-header:hover {
+  opacity: 0.9;
+}

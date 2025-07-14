@@ -1,0 +1,95 @@
+/* css/comparison.css - Estilos para a seção de comparação (VERSÃO FINAL) */
+
+#comparison {
+  padding: 80px 20px;
+  background-color: var(--light-bg);
+}
+
+.comparison-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.comparison-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.comparison-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.comparison-card .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.icon-wrapper.icon-no {
+  background-color: #e74c3c; /* Vermelho */
+}
+
+.icon-wrapper.icon-yes {
+  background-color: #2ecc71; /* Verde */
+}
+
+.comparison-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comparison-card ul li {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* === BLOCO DE CSS CORRIGIDO PARA OS ÍCONES DA LISTA === */
+.comparison-card ul li i {
+  /* Propriedades essenciais para renderizar o ícone */
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  
+  /* Garante que o ícone tenha um espaço definido para ocupar */
+  width: 1.2em;
+  text-align: center;
+  
+  /* Nossos ajustes de estilo */
+  margin-top: 4px;
+}
+/* === FIM DO BLOCO CORRIGIDO === */
+
+
+.card-negative ul li i {
+  color: #e74c3c;
+}
+
+.card-positive ul li i {
+  color: #2ecc71;
+}

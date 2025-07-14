@@ -1,0 +1,23 @@
+/* css/sections.css */
+
+/* Estilos aplicados a várias seções para consistência */
+.social-proof,
+#servicos,
+#depoimentos,
+#diagnostico {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}

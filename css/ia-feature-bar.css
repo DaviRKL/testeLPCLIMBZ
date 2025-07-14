@@ -1,0 +1,41 @@
+/* css/ia-feature-bar.css */
+
+.ia-feature-bar {
+  background-color: var(--light-bg);
+  padding: 40px 20px;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.ia-feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ia-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-basis: 300px;
+}
+
+.ia-feature-item .icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.ia-feature-item h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.ia-feature-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}

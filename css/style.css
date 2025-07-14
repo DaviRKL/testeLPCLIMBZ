@@ -1,0 +1,17 @@
+/* css/style.css */
+
+@import url('base.css');
+@import url('header.css');
+@import url('hero.css');
+@import url('sections.css');
+@import url('ia-feature-bar.css');
+@import url('social-proof.css');
+@import url('services.css');
+@import url('testimonials.css');
+@import url('form.css');
+@import url('footer.css');
+@import url('responsive.css');
+@import url('founder.css');
+@import url('faq.css');
+@import url('comparision.css');
+@import url('product-overview.css');

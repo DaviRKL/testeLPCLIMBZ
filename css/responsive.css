@@ -1,0 +1,111 @@
+/* css/responsive.css - TODAS as Media Queries Unificadas */
+
+/* =================================
+   TELAS DE TABLET E MENORES
+   ================================= */
+@media (max-width: 992px) {
+    .hero-content {
+        max-width: 80%; /* Damos um pouco mais de espaço no tablet */
+    }
+}
+
+
+/* =================================
+   TELAS DE CELULAR E MENORES
+   ================================= */
+@media (max-width: 768px) {
+
+    /* --- GERAL --- */
+    .section-title {
+        font-size: 1.8rem; /* Títulos um pouco menores */
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* --- HEADER E MENU --- */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--accent);
+        flex-direction: column;
+        padding: 10px 20px;
+        border-top: 1px solid #eee;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    /* --- HERO BANNER --- */
+    .hero-banner {
+        text-align: center;
+        background-image:
+            linear-gradient(to bottom, rgba(18, 47, 74, 0.95), rgba(18, 47, 74, 0.8)),
+            url('../images/hero/reuniao.jpg');
+        background-position: center center;
+    }
+    .hero-content {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    /* --- IA FEATURE BAR --- */
+    .ia-feature-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    
+    /* --- PRODUCT OVERVIEW --- */
+    .product-header {
+        margin-bottom: 40px;
+    }
+    .product-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .product-description {
+        text-align: left; /* Mantém a legibilidade */
+    }
+
+    /* --- FUNDADOR --- */
+    .founder-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .founder-bio h3 {
+        font-size: 1.5rem;
+    }
+
+    /* --- COMPARISON (CORREÇÃO PRINCIPAL) --- */
+    .comparison-container {
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        gap: 30px;
+    }
+    .comparison-card {
+        padding: 25px;
+    }
+    .comparison-card h3 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+        text-align: center; /* Centraliza o título no mobile */
+    }
+    .comparison-card .card-header {
+        flex-direction: column; /* Coloca o ícone em cima do texto */
+        gap: 10px;
+    }
+}

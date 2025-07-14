@@ -1,0 +1,50 @@
+/* css/hero.css */
+
+.hero-banner {
+  height: 550px;
+  padding-top: 70px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(to right, var(--primary) 35%, rgba(18, 47, 74, 0.85) 55%, rgba(18, 47, 74, 0) 75%),
+    url('../images/hero/reuniao.jpg'); /* ../ para voltar uma pasta e entrar em images */
+  background-size: cover;
+  background-position: center right;
+}
+
+.hero-content {
+  padding: 0 4rem;
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  max-width: 500px;
+  color: #e0e0e0;
+}
+
+.hero-content .cta-button {
+  display: inline-block;
+  background: var(--btn-gradient);
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 2rem;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hero-content .cta-button:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}

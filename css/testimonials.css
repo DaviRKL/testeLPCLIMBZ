@@ -1,0 +1,50 @@
+/* css/testimonials.css */
+
+#depoimentos {
+  background: var(--light-bg);
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial::before {
+  content: "“";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  font-size: 3em;
+  color: #63DEF0;
+  font-family: serif;
+  opacity: 0.5;
+}
+
+.testimonial p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial .author {
+  font-style: italic;
+  color: #555;
+  text-align: right;
+}
+
+.testimonial strong {
+  font-weight: bold;
+  color: var(--primary);
+}
