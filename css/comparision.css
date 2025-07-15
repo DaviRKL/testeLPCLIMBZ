@@ -1,4 +1,4 @@
-/* css/comparison.css - Estilos para a seção de comparação (VERSÃO FINAL) */
+/* css/comparison.css - Estilos para a seção de comparação */
 
 #comparison {
   padding: 80px 20px;
@@ -8,8 +8,7 @@
 .comparison-container {
   max-width: 1000px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex; /* Usando Flexbox */
   gap: 40px;
 }
 
@@ -18,6 +17,7 @@
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  flex: 1; /* Faz com que os cards ocupem o espaço igualmente */
 }
 
 .comparison-card .card-header {
@@ -67,24 +67,16 @@
   gap: 10px;
 }
 
-/* === BLOCO DE CSS CORRIGIDO PARA OS ÍCONES DA LISTA === */
 .comparison-card ul li i {
-  /* Propriedades essenciais para renderizar o ícone */
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  
-  /* Garante que o ícone tenha um espaço definido para ocupar */
   width: 1.2em;
   text-align: center;
-  
-  /* Nossos ajustes de estilo */
   margin-top: 4px;
 }
-/* === FIM DO BLOCO CORRIGIDO === */
-
 
 .card-negative ul li i {
   color: #e74c3c;

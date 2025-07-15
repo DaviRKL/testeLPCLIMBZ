@@ -1,0 +1,29 @@
+/* css/animations.css - Estilos para as animações de scroll */
+
+/* Estado inicial para todos os elementos que serão animados */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+}
+
+/* Estado inicial para elementos vindo da esquerda */
+.reveal-left {
+  transform: translateX(-100px);
+}
+
+/* Estado inicial para elementos vindo da direita */
+.reveal-right {
+  transform: translateX(100px);
+}
+
+/* Estado inicial para elementos vindo de baixo (ótimo para cards) */
+.reveal-up {
+  transform: translateY(100px);
+}
+
+/* Classe que será adicionada via JS para ativar a animação */
+.reveal.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
