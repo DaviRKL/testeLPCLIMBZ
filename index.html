@@ -5,12 +5,51 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClimbZ – Consultoria Empresarial</title>
+  <title>Consultoria Empresarial para PMEs - ClimbZ Consultoria</title>
   <meta name="description"
-    content="Consultoria empresarial especializada em estruturação, acompanhamento, consultorias avulsas, produtos tech, gestão patrimonial e diagnóstico organizacional. Converse com nossa agente virtual Maria e leve sua empresa ao topo do sucesso." />
+    content="A ClimbZ oferece consultoria empresarial focada em PMEs. Estruturamos finanças, otimizamos vendas e implementamos tecnologia para escalar seu negócio. Obtenha um diagnóstico gratuito." />
+    <meta name="keywords" content="consultoria empresarial, consultoria para pme, estruturação financeira, otimização de processos, gestão de vendas, business intelligence, climbz">
+     <meta property="og:title" content="Consultoria Empresarial Estratégica | ClimbZ" />
+  <meta property="og:description" content="Ajudamos PMEs a escalar com processos, finanças e vendas estruturadas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.climbz.com.br" /> <!-- SUBSTITUA PELO SEU DOMÍNIO REAL -->
+  <meta property="og:image" content="https://www.climbz.com.br/images/logos/climbz/Climbz Main Logo 2400x1800.jpg" /> <!-- CRIE UMA IMAGEM DE COMPARTILHAMENTO (1200x630px) E COLOQUE O LINK AQUI -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Consultoria Empresarial para PMEs | ClimbZ">
+  <meta name="twitter:description" content="Ajudamos PMEs a escalar com processos, finanças e vendas estruturadas.">
+  <meta name="twitter:image" content="https://www.climbz.com.br/images/logos/climbz/Climbz Main Logo 2400x1800.jpg"> <!-- MESMA IMAGEM ACIMA -->
+  <link rel="canonical" href="https://www.climbz.com.br" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="./images/logos/Climbz Logo Symbol.png">
+  <link rel="icon" href="./images/logos/climbz/Climbz Logo Symbol.png">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ClimbZ Consultoria Empresarial",
+    "image": "https://www.climbz.com.br/images/logos/Climbz Main Logo.png",
+    "url": "https://www.climbz.com.br",
+    "telephone": "+55-15-98178-0442",
+    "email": "contato@climbz.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Angelo Elias, 443", 
+      "addressLocality": "Sorocaba",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "description": "Consultoria empresarial especializada em ajudar pequenas e médias empresas a escalar através da estruturação de processos, finanças e vendas.",
+    "founder": {
+      "@type": "Person",
+      "name": "Francisco Rodrigues"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "São Paulo"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -19,10 +58,9 @@
 <header>
   <div class="header-inner">
     <div class="logo">
-      <a href="#"><img src="images/logos/Climbz Main Logo.png" alt="Logo da ClimbZ"></a>
+            <a href="/" aria-label="Página Inicial da ClimbZ"><img src="images/logos/climbz/Climbz Main Logo.png" alt="Logo da ClimbZ Consultoria Empresarial"></a>
     </div>
     <nav>
-    
       <ul id="nav-links">
         <li><a href="#product-overview">O que é</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -32,19 +70,19 @@
       </ul>
     </nav>
     <a href="#" class="btn-cta-header js-open-chat">Converse com a Maria</a>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <button class="menu-icon" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu()" >☰</div>
   </div>
 </header>
 
   <main>
-    <div class="hero-banner">
+    <section class="hero-banner">
       <div class="hero-content">
         <h1>Impulsione o crescimento da sua empresa com consultoria especializada</h1>
         <p>Receba um diagnóstico gratuito para sua empresa. Responda ao formulário abaixo e deixe que a <strong>Maria,
             nossa assistente de IA</strong>, analise seus desafios e aponte os primeiros passos.</p>
         <a href="#diagnostico" class="cta-button">Receba um diagnóstico <strong>gratuito</strong></a>
       </div>
-    </div>
+    </section>
 
     <section class="ia-feature-bar reveal reveal-up">
       <div class="ia-feature-container">
@@ -355,7 +393,7 @@
 
       <div class="faq-container">
         <!-- Pergunta 1 -->
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-left">
           <button class="faq-question">
             <span>O que inclui o serviço de Estruturação e Acompanhamento?</span>
             <i class="fas fa-chevron-down"></i>
@@ -368,12 +406,12 @@
           </div>
         </div>
         <!-- Pergunta 2 -->
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-right">
           <button class="faq-question">
             <span>Minha empresa é pequena. A consultoria da ClimbZ serve para mim?</span>
             <i class="fas fa-chevron-down"></i>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer reveal reveal-left">
             <p>Sim! Nosso foco é justamente em empresas de pequeno e médio portes. Entendemos os desafios específicos de
               quem está em fase de crescimento e adaptamos nossas metodologias para a sua realidade. Seja através de um
               acompanhamento completo ou de uma consultoria avulsa para resolver um problema pontual, nosso objetivo é
@@ -381,7 +419,7 @@
           </div>
         </div>
         <!-- Pergunta 3 -->
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-right">
           <button class="faq-question">
             <span>Como a ClimbZ pode me ajudar a vender mais?</span>
             <i class="fas fa-chevron-down"></i>
@@ -394,7 +432,7 @@
           </div>
         </div>
         <!-- Pergunta 4 -->
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-left">
           <button class="faq-question">
             <span>O que é a consultoria avulsa e quando devo contratá-la?</span>
             <i class="fas fa-chevron-down"></i>
@@ -407,7 +445,7 @@
           </div>
         </div>
         <!-- Pergunta 5 -->
-        <div class="faq-item">
+        <div class="faq-item reveal reveal-right">
           <button class="faq-question">
             <span>Como funciona o Diagnóstico Gratuito com IA?</span>
             <i class="fas fa-chevron-down"></i>
@@ -433,14 +471,12 @@
 
   <footer>
     <div class="footer-content">
-      <p><strong>Fale conosco:</strong> (11) 98765-4321 | contato@climbz.com.br</p>
-      <p><strong>Endereço:</strong> Rua Exemplo, 123 – Sorocaba/SP</p>
+      <p><strong>Fale conosco:</strong> (15) 98178-0442 | <a href="mailto:francisco@climbz.com.br">francisco@climbz.com.br</a></p>
+      <p><strong>Endereço:</strong> Rua Angelo Elias, 443 - Jardim Rosalia-Santa, Sorocaba/SP</p>
       <div class="social-icons">
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/francisco-rodrigues-69254a3b/" aria-label="LinkedIn da ClimbZ"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
       </div>
-      <p class="copyright">ClimbZ Consultoria © 2025. Todos os direitos reservados.</p>
+      <p class="copyright">ClimbZ Consultoria © 2024. Todos os direitos reservados.</p>
     </div>
   </footer>
 
