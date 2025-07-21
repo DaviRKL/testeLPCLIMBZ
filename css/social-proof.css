@@ -20,3 +20,7 @@
   opacity: 1;
   transform: scale(1.1);
 }
+
+:hover .logoNDB {
+  background-color: black;
+}

@@ -1,0 +1,34 @@
+/* css/fab.css - Estilos para o botão flutuante (Floating Action Button) */
+
+.whatsapp-fab {
+  position: fixed; /* Chave para flutuar na tela */
+  bottom: 25px;    /* Distância da parte de baixo */
+  right: 25px;     /* Distância da direita */
+  z-index: 1000;   /* Garante que ele fique por cima de outros elementos */
+
+  /* Estilo do círculo */
+  width: 60px;
+  height: 60px;
+  background-color: #25D366; /* Cor oficial do WhatsApp */
+  border-radius: 50%; /* Transforma o quadrado em círculo */
+  
+  /* Sombra para dar profundidade */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* Centraliza a imagem do WhatsApp dentro do círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Efeito suave de transição */
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1); /* Aumenta um pouco de tamanho ao passar o mouse */
+}
+
+.whatsapp-fab img {
+  width: 35px;  /* Tamanho do ícone dentro do círculo */
+  height: auto;
+}
