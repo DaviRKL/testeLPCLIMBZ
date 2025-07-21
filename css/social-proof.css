@@ -24,3 +24,87 @@
 :hover .logoNDB {
   background-color: black;
 }
+
+/* Animação que move os logos da direita para a esquerda */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move o track exatamente pela metade da sua largura (o tamanho do conjunto original de logos) */
+    transform: translateX(calc(-180px * 17)); /* 180px por logo X 17 logos */
+  }
+}
+
+/* Container principal do carrossel */
+.logo-carousel {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px; /* Altura da faixa do carrossel */
+  margin: auto;
+  overflow: hidden; /* Esconde o que está fora da área visível */
+  position: relative;
+  width: 90%; /* Largura do carrossel na página */
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+/* Efeito de degradê nas laterais para suavizar o aparecimento/desaparecimento dos logos */
+.logo-carousel::before,
+.logo-carousel::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 50%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 5%; /* Largura da "sombra" */
+  z-index: 2;
+}
+
+.logo-carousel::before {
+  left: 0;
+  top: 0;
+}
+
+.logo-carousel::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/* O "trilho" que contém todos os logos (originais + duplicados) */
+.logo-track {
+  animation: scroll 60s linear infinite; /* Aplica a animação */
+  display: flex;
+  /* Largura total: (180px por logo) X (17 logos X 2 conjuntos) = 6120px */
+  width: calc(180px * 34); 
+  background-color: #122f4a;
+}
+
+/* Pausa a animação quando o mouse está sobre o carrossel */
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+/* Cada "slide" individual que contém um logo */
+.logo-slide {
+  height: 100px;
+  width: 180px; /* Largura fixa para cada logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.logo-slide img {
+  max-width: 100%;
+  max-height: 70px; /* Altura máxima para os logos não ficarem muito grandes */
+  width: auto;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre um logo específico */
+.logo-slide:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
