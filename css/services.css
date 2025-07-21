@@ -1,36 +1,66 @@
-/* css/services.css */
+/* css/services.css - Estilos para a seção de serviços */
 
 .services-grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Um pouco mais de largura base */
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.service {
+.service-card {
   background: #fff;
-  padding: 30px;
+  padding: 35px 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #eef;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo do card verticalmente */
 }
 
-.service:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
-.service h3 {
+.service-icon {
+  font-size: 2.5rem;
   color: var(--primary);
-  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
-.service p {
+.service-card p {
   color: #555;
   font-size: 0.95em;
-  line-height: 1.5;
+  line-height: 1.6;
+  flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível, alinhando os rodapés */
+}
+
+.service-deliverables {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.service-deliverables li {
+  color: #333;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-deliverables .fa-check-circle {
+  color: #2ecc71; /* Cor verde para os ícones de check */
 }
